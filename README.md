@@ -37,6 +37,7 @@ Same as above, just minified quite a lot. Again, it depends on languagenut's own
 ### script 3
 
 ```Util.seedRandomGenerator=function(seed){randomGenerator= ()=>{return 0}};s = setTimeout; setTimeout = function(a, b, ...x){s(()=>{try{a()}catch{}}, b <= 3000?1:b, ...x)}```
+
 First replaces `setTimeout` with a version which ignores any delay less than 3 seconds,
 then patches out the random number generator with one that returns a constant value, bypassing all of the scrambling (all answers will be in the same place)
 
